@@ -1,0 +1,100 @@
+.addachievement{
+  box-sizing: border-box;
+  width: 100%;
+  /* max-width:800px; */
+  padding: 30px 80px;
+  margin: 30px auto;
+  border-radius:12px;
+  background: #ebebeb;
+}
+.addachievement-outerdiv{
+  width:65%;
+}
+.addachievement p{
+  margin-bottom: 3px;
+}
+.addachievement-fields{
+  width:100%;
+  color:#4e4e4e;
+  font-size: 16px;
+}
+.addachievement-fields-f{
+  width:100%;
+  color:#4e4e4e;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addachievement-fields input{
+  box-sizing: border-box;
+  width:100%;
+  height:40px;
+  border-radius: 5px;
+  padding:5px 15px;
+  border:1px solid #c3c3c3;
+  outline: none;
+  color: #7b7b7b;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+.addachievement-flex{
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.addachievement-selector{
+  padding:8px;
+  width:130px;
+  height:40px;
+  font-size: 14px;
+  border-radius: 8px;
+  color:#7b7b7b;
+  border:1px solid #7b7b7b8d;
+}
+.required{
+  border:1.5px solid #e31616da;
+}
+option{
+  font-size: 16px;
+}
+option:hover{
+  background-color: #7b7b7b8d;
+}
+.uploading-img{
+  height:120px;
+  width:120px;
+  border-radius: 8px;
+  object-fit: contain;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+.description-box{
+  width: 100%;
+  border-radius: 5px;
+  padding:5px 15px;
+  border:1px solid #c3c3c3;
+  outline: none;
+  color: #7b7b7b;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+.addachievement-btn{
+  margin-top: 20px;
+  margin: 20px auto;
+  width:160px;
+  height:50px;
+  border-radius:6px;
+  background: #6079ff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.addachievement-btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
