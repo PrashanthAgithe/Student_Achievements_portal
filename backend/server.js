@@ -116,7 +116,6 @@ app.post('/register',async(req,res)=>{
   let check=await Admin.findOne({username:admin.username});
   if(!check){
     admin.password=await bcryptjs.hash(admin.password,6);
-    console.log(admin)
     let result=await Admin.insertMany([{...admin}])
     res.json({
       success:true,
@@ -125,7 +124,7 @@ app.post('/register',async(req,res)=>{
   }else{
     res.json({
       success:false,
-      error:'Admin already exist'
+      error:'User already exist'
     })
   }
 })
@@ -149,7 +148,7 @@ app.post('/login',async(req,res)=>{
   }else{
     res.json({
       success:false,
-      message:"Admin not found"
+      message:"User not found"
     })
   }
 })

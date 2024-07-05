@@ -3,7 +3,7 @@
   min-height: 88vh;
   display: flex;
   gap: 60px;
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 .admin-main-blur{
   display: flex;

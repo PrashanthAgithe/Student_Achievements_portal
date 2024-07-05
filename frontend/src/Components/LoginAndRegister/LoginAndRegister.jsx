@@ -37,6 +37,7 @@ const LoginAndRegister = (props) => {
       if(responsedata.success){
         localStorage.setItem('student-admin',responsedata.name);
         setclasse('login-hide');
+        navigate('./');
         props.fun('admin-main')
       }else{
         seterr(responsedata.message)
@@ -54,7 +55,7 @@ const LoginAndRegister = (props) => {
       console.log(responsedata);
       if(responsedata.success){
         setopaquepage();
-      }else if(responsedata.error==='Admin already exist') {
+      }else {
         seterr(responsedata.error)
       }
     }
@@ -97,10 +98,25 @@ const LoginAndRegister = (props) => {
             </div>:<></>
           }
           <div>
-          <input  type="password" name='password' placeholder='Password'  {...register('password',{required:true})} className={errors.password?.type==='required'?"required":"input"} onPaste={(e)=>{e.preventDefault()}} onCopy={(e)=>{e.preventDefault()}} onCut={(e)=>{e.preventDefault()}}/>
+          <input  type="password" name='password' placeholder='Password'  {...register('password', {
+    required: true,
+    minLength: {
+      value: 4,
+      message: "Password must be at least 4 characters"
+    },
+    maxLength: {
+      value: 10,
+      message: "Password cannot exceed 10 characters"
+    },
+    pattern: {
+      value: /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/,
+      message: "Password must contain one special character"
+    }
+  })} className={errors.password?.type==='required'?"required":"input"} onPaste={(e)=>{e.preventDefault()}} onCopy={(e)=>{e.preventDefault()}} onCut={(e)=>{e.preventDefault()}}/>
           {/* {
             errors.password?.type==='required'?<p className='errordisplay'>Please enter password</p>:<></>
           } */}
+          {errors.password && <p className='errordisplay'>{errors.password.message}</p>}
           </div>
         </div>
         <div className="submitdiv">

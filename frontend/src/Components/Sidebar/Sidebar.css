@@ -13,8 +13,9 @@
   border-radius: 8px;
 }
 .sidebar {
-  width: 200px;
-  padding: 50px 30px;
+  width: 175px;
+  padding: 50px 20px;
+  padding-right: 25px;
   display: flex;
   flex-direction: column;
   gap: 50px;

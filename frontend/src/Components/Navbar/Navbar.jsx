@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import navlogo from '../../assets/logo.jpg'
-import navProfile from '../../assets/Admin-profile.webp'
+import navProfile from '../../assets/profile.png'
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   let navigate=useNavigate();
@@ -15,7 +15,7 @@ const Navbar = () => {
       <img src={navlogo} alt=""  className='nav-logo'/>
       <div className='admin-profile'>
       <img src={navProfile} alt="" className='nav-profile'/>
-      <h3 style={{color:'orange'}}>Admin {islogin!==""?islogin:" ?"}</h3>
+      <h3 style={{color:'darklightblue'}}>Welcome {islogin!==""?islogin:" ?"}</h3>
       {
         islogin!==""?<button className='signout-btn' onClick={signout}>Signout</button>:<></>
       }

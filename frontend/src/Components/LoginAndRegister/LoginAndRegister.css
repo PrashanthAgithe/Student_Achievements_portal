@@ -5,11 +5,11 @@
   transition-timing-function: ease;
   transition-delay: 0.1s;
   transition-duration: 0.4s;
-  z-index: 1;
+  z-index: 5;
 }
 .login-hide{
   position:fixed;
-  transform: translate(72%,-90%);
+  transform: translate(72%,-110%);
   transition-property: transform;
   transition-timing-function: ease;
   transition-delay: 0.1s;
