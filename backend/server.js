@@ -3,7 +3,7 @@ const exp=require('express')
 const app=exp();
 //extract body of req 
 app.use(exp.json())
-
+require('dotenv').config()
 const jwt=require('jsonwebtoken');
 const multer=require('multer');
 const path=require('path');
@@ -12,7 +12,7 @@ const bcryptjs=require('bcryptjs')
 app.use(cors());
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb+srv://prashanthagithe:prashanth1986@cluster0.msivmjn.mongodb.net/studentachievementsdb').then(()=>console.log("DB connected"))
+mongoose.connect(process.env.DB_URL).then(()=>console.log("DB connected"))
 //sample route
 app.get('/',(req,res)=>{
   res.send('express app is running')
