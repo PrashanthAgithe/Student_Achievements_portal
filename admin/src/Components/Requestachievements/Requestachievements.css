@@ -80,9 +80,19 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+.request-btns{
+  width: 95%;
+  display: flex;
+  gap:10px;
+}
 .allachievements-item button:hover {
   background-color: #c40a0a;
+}
+.request-btns .accept-btn{
+  background-color: rgb(23, 118, 23);
+}
+.request-btns .accept-btn:hover{
+  background-color: rgb(20, 91, 20);
 }
 
 @keyframes fadeIn {

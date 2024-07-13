@@ -12,14 +12,14 @@
   z-index: 6;
 }
 .nav-heading {
-  background-image: linear-gradient(to right, #ed7c0b, #efab46);
+  background-image: linear-gradient(to right, #2e99f6, #1ebae0);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 28px; 
   font-weight: 800; 
   padding: 10px; 
-  margin-left: 100px;
 }
+
 .nav-logo {
   width: 53px;
 }

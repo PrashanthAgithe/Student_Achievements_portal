@@ -5,8 +5,7 @@ import ErrorLayout from './Components/ErrorLayout/ErrorLayout';
 import Addachievement from './Components/Addachievement/Addachievement';
 import Allachievements from './Components/Allachievements/Allachievements';
 import Achievementpage from './Components/Achievementpage/Achievementpage';
-import Requestachievements from './Components/Requestachievements/Requestachievements';
-const App = () => {
+function App() {
   let router=createBrowserRouter([
     {
       path:'',
@@ -15,15 +14,11 @@ const App = () => {
       children:[
         {
           path:'',
-          element:<Addachievement />
-        },
-        {
-          path:'allachievements',
           element:<Allachievements />
         },
         {
-          path:'requestachievements',
-          element:<Requestachievements />
+          path:'addachievements',
+          element:<Addachievement />
         },
         {
           path:'achievement/:achievementId',
@@ -36,7 +31,7 @@ const App = () => {
     <div className='app'>
       <RouterProvider router={router}></RouterProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

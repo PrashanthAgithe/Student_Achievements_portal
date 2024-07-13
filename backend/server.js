@@ -64,6 +64,10 @@ const Achievement=mongoose.model('Achievement',{
   image:{
     type:String,
     required:true,
+  },
+  status:{
+    type:Boolean,
+    required:true,   
   }
 })
 //route to add achievement
@@ -83,12 +87,25 @@ app.post('/addachievement',async(req,res)=>{
 })
 //route for getting all achievements
 app.get('/allachievements',async(req,res)=>{
-  let all_achievements=await Achievement.find({});
+  let all_achievements=await Achievement.find({status:true});
+  res.send(all_achievements);
+})
+//route for getting all requested achievements
+app.get('/requestachievements',async(req,res)=>{
+  let all_achievements=await Achievement.find({status:false});
   res.send(all_achievements);
 })
 //route for deleting achievement
 app.post('/removeachievement',async(req,res)=>{
   await Achievement.deleteOne({id:req.body.id})
+  res.json({
+    success:true,
+    name:req.body.name
+  })
+})
+//route for accepting achievement
+app.post('/acceptachievement',async(req,res)=>{
+  await Achievement.updateOne({id:req.body.id},{status:true});
   res.json({
     success:true,
     name:req.body.name

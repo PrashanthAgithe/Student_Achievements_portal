@@ -76,14 +76,3 @@ hr{
   font-size: 18px;
   font-weight: 600;
 }
-.requests-btns{
-  width: 80%;
-  display: flex;
-  gap:15px;
-}
-.requests-btns .accept-btn{
-  background-color: rgb(23, 118, 23);
-}
-.requests-btns .accept-btn:hover{
-  background-color: rgb(20, 91, 20);
-}

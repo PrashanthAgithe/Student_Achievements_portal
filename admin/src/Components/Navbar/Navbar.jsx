@@ -13,9 +13,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <img src={navlogo} alt=""  className='nav-logo'/>
+      <h2 className='nav-heading'>Students Achievements Admin Panel</h2>
       <div className='admin-profile'>
       <img src={navProfile} alt="" className='nav-profile'/>
-      <h3 style={{color:'darklightblue'}}>Welcome {islogin!==""?islogin:" ?"}</h3>
+      <h3 style={{color:'darklightblue'}}>Admin {islogin!==""?islogin:" ?"}</h3>
       {
         islogin!==""?<button className='signout-btn' onClick={signout}>Signout</button>:<></>
       }

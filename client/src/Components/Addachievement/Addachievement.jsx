@@ -40,7 +40,7 @@ const Addachievement = () => {
     }).then((resp)=>resp.json()).then((data)=>{responsedata=data})
     if(responsedata.success){
       achievementDetails.image=responsedata.image_url;
-      achievementDetails.status=true;
+      achievementDetails.status=false;
       console.log(achievementDetails);
       await fetch('http://localhost:4000/addachievement',{
         method:'POST',
@@ -116,7 +116,7 @@ const Addachievement = () => {
         <input onChange={imagehandler} type="file" name="image" id="file-input" hidden/>
       </div>
       <div className='addachievement-btn-div'>
-      <button type='submit' className='addachievement-btn'>ADD</button>
+      <button type='submit' className='addachievement-btn'>Request</button>
       </div>
       </form>
       </div>
